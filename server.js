@@ -18,10 +18,11 @@ const port = process.env.PORT;
 
 // importing routes
 import userRoutes from "./routes/user.js";
+import productRoutes from "./routes/product.js";
 
 //using routes
-
 app.use("/api", userRoutes);
+app.use("/api", productRoutes);
 
 app.listen(port, () => {
   console.log(`Server is runnning port http://localhost:${port}`);
